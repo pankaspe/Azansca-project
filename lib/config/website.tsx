@@ -1,7 +1,7 @@
 const websiteConfig = {
    meta: {
       title: "Anzasca",
-      subTitle: "Responsive template multipurpose built with Chakra UI in Typescript for Next Js",
+      subTitle: "Un repository con dati botanici derivati dalla mappatura del territorio della Valle Anzasca.",
       logo: false,
       favicon: false
    },

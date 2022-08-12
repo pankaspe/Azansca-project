@@ -8,6 +8,10 @@ const theme = extendTheme({
     global: (props: { colorMode: string }) => ({
       'html, body': {
         bg: props.colorMode === 'dark' ? 'gray.900' : 'gray.50',
+      },
+      h3: {
+        fontSize: "2rem",
+        pt: 8
       }
     }),
   },

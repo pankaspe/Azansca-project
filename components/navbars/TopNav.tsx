@@ -192,9 +192,17 @@ const NAV_ITEMS: Array<NavItem> = [
     href: '/',
   },
   {
-    label: 'Docs',
-    href: '/docs',
+    label: 'Botanica',
+    href: '/plants',
   },
+  {
+    label: 'Agricoltura',
+    href: '/farming',
+  },
+  {
+    label: 'Alpeggi',
+    href: '/huts',
+  }, 
 ];
 
 export default TopNav

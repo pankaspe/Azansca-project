@@ -19,11 +19,11 @@ const Hero: React.FC<Hero> = ({ headline, subHeadline }) => {
          <Heading 
             as="h1" 
             size={path === "/" ? "4xl" : "2xl"}
-            noOfLines={1} 
             fontWeight={600} 
             pb={6} 
             color={useColorModeValue('gray.600', 'gray.200')}
             letterSpacing={4}
+            textAlign="center"
          >
             <Text 
                borderBottom="solid" 

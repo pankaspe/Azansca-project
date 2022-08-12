@@ -127,7 +127,7 @@ const DesktopNav = () => {
               p={2}
               fontSize={'md'}
               fontWeight={400}
-              color={useColorModeValue('gray.50', 'green.50')}
+              color='gray.50'
               _hover={{ textDecoration: 'underline' }}
             >
               {navItem.label}

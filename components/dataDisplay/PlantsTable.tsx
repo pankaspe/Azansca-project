@@ -68,7 +68,7 @@ const columns = [
       footer: () => 'Nome',
       cell: props => (
          <NextLink href={`/plants/${convertToSlug(props.getValue())}`} passHref>
-            <Link color={useColorModeValue('green.800', 'green.100')}>
+            <Link>
                {props.getValue()}
             </Link>
          </NextLink>

@@ -38,7 +38,7 @@ const Hero: React.FC<Hero> = ({ headline, subHeadline }) => {
             textAlign="center" 
             color={useColorModeValue('gray.500', 'gray.100')}
          >
-               { subHeadline }
+            { subHeadline }
          </Text>
       </Container>
    )

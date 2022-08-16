@@ -26,6 +26,7 @@ const Plant: NextPage<Props> = ({ plantData }) => {
       <Seo
         title={plantData.title}
         description={plantData.summary}
+        ogImage={plantData.hero}
       />
       <Hero 
         headline={plantData.title}

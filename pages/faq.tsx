@@ -4,19 +4,19 @@ import MainLayout from "../components/layouts/MainLayout";
 import Seo from "../components/Seo";
 import Hero from '../components/Hero'
 
-const Farming: NextPage = () => {
+const Faq: NextPage = () => {
   return (
     <MainLayout>
       <Seo
-        title="Agricoltura locale"
-        description="cprodotti della Valle Anzasca"
+        title="F.A.Q."
+        description="frequently asked question"
       />
       <Hero 
-         headline="Agricoltura" 
-         subHeadline="Produttori locali" 
+         headline="F.A.Q." 
+         subHeadline="frequently asked question" 
       />
     </MainLayout>
   )
 }
 
-export default Farming
+export default Faq

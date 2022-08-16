@@ -42,7 +42,9 @@ const Home: NextPage<Props> = ( {plants} ) => {
   return (
     <MainLayout>
       <Seo
+        title={websiteConfig.meta.title}
         description={websiteConfig.meta.subTitle}
+        ogImage={websiteConfig.meta.ogImage}
       />
       <Hero 
         headline={websiteConfig.meta.title} 

@@ -1,7 +1,7 @@
 import { Container, Heading, Text, useColorModeValue } from '@chakra-ui/react';
 import { useRouter } from 'next/router';
 
-export interface Hero {
+interface Hero {
    headline: string,
    subHeadline: string,
 }

@@ -1,5 +1,5 @@
 import type { NextPage, GetStaticProps } from 'next'
-import { Container, Text } from '@chakra-ui/react'
+import { Container } from '@chakra-ui/react'
 
 /* import custom components */
 import MainLayout from "../components/layouts/MainLayout"

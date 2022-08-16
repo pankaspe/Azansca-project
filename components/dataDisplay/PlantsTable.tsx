@@ -14,7 +14,6 @@ import {
    Tbody, 
    Tfoot, 
    Tr, Th, Td,
-   useColorModeValue
 } from '@chakra-ui/react'
 
 import {
@@ -123,9 +122,10 @@ const PlantsTable: React.FC<Props> = ({ trueData }) => {
    })
 
    return(
-      <TableContainer >
+      <TableContainer pt={12}>
          <Box pb={14}>
             <Input
+               focusBorderColor='green.500'
                variant='flushed'
                value={globalFilter ?? ''}
                onChange={e => setGlobalFilter(e.target.value)}

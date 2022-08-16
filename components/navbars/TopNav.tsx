@@ -1,11 +1,14 @@
 import React from 'react';
 import SwitchColor from '../SwitchColorButton';
 import websiteConfig from '../../lib/config/website';
-import NextLink from "next/link"
+import NextLink from "next/link";
+import Image from 'next/image';
+
 
 import { HamburgerIcon } from '@chakra-ui/icons';
 
 import {
+   Center,
    Box,
    Flex,
    Text,
@@ -28,6 +31,7 @@ const TopNav: React.FC = () => {
 
   const { isOpen, onOpen, onClose } = useDisclosure()
   const btnRef =  React.useRef<HTMLButtonElement>(null);
+
   return(
     <Box>
 
@@ -35,7 +39,7 @@ const TopNav: React.FC = () => {
       <Flex
         bg={useColorModeValue('green.600', 'green.800')}
         color={useColorModeValue('white', 'gray.50')}
-        minH={'60px'}
+        minH={'80px'}
         py={{ base: 2 }}
         px={{ base: 4 }}
         borderBottom={1}
@@ -73,11 +77,14 @@ const TopNav: React.FC = () => {
             color={useColorModeValue('white', 'white')}
             fontWeight={600}
           >
-            { websiteConfig.meta.logo ? "logoimage" : websiteConfig.meta.title }
+            { websiteConfig.meta.logo 
+              ? <Image src={websiteConfig.meta.logo} alt={websiteConfig.meta.title} width={65} height={50} />
+              : websiteConfig.meta.title 
+            }
           </Text>
-          <Flex display={{ base: 'none', md: 'flex' }} ml={10}>
+          <Center display={{ base: 'none', md: 'flex' }} ml={10}>
             <DesktopNav />
-          </Flex>
+          </Center>
         </Flex>
 
         <Stack

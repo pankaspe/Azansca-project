@@ -10,7 +10,7 @@ interface Seo {
 
 const Seo: React.FC<Seo> = ({ title, description, ogImage }) => {
 
-  const path = useRouter().pathname;
+  const path = useRouter().asPath;
   
   return (
     <>
@@ -32,7 +32,7 @@ const Seo: React.FC<Seo> = ({ title, description, ogImage }) => {
           key="fb title"
         />
         <meta property="og:url" content={websiteConfig.meta.url + path} />
-        <meta property="og:description" content={description} key="desc" />
+        <meta property="og:description" content={description} key="fb desc" />
         <meta property="og:image" content={websiteConfig.meta.url + ogImage} />
         <meta property="og:image:alt" content={description}></meta>
 
@@ -44,7 +44,7 @@ const Seo: React.FC<Seo> = ({ title, description, ogImage }) => {
           key="tw title"
         />
         <meta name="twitter:url" content={websiteConfig.meta.url + path} />
-        <meta name="twitter:description" content={description} key="desc" />
+        <meta name="twitter:description" content={description} key="tw desc" />
         <meta name="twitter:image" content={websiteConfig.meta.url + ogImage} key="tw image" />
         <meta name="twitter:image:alt" content={description} />
       </Head>

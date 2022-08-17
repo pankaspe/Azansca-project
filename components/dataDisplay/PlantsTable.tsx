@@ -2,12 +2,17 @@ import { useState } from 'react'
 import ChakraImage from '../../lib/helper/chakraImage'
 import NextLink from "next/link"
 
+import { ArrowLeftIcon, ArrowRightIcon} from '@chakra-ui/icons'
 import { 
+   Flex,
+   Divider,
    Box,
    Input,
    Link,
    Text,
    Badge,
+   IconButton,
+   ButtonGroup,
    TableContainer, 
    Table, 
    Thead, 
@@ -122,16 +127,17 @@ const PlantsTable: React.FC<Props> = ({ trueData }) => {
    })
 
    return(
-      <TableContainer pt={12}>
-         <Box pb={14}>
-            <Input
-               focusBorderColor='green.500'
-               variant='flushed'
-               value={globalFilter ?? ''}
-               onChange={e => setGlobalFilter(e.target.value)}
-               placeholder="Cerca il nome di una pianta..."
-            />
-         </Box>
+   <>
+      <Box pt={8}>
+         <Input
+            focusBorderColor='green.500'
+            variant='flushed'
+            value={globalFilter ?? ''}
+            onChange={e => setGlobalFilter(e.target.value)}
+            placeholder="Cerca il nome di una pianta..."
+         />
+      </Box>
+      <TableContainer pt={10}>
          <Table variant='striped' size='sm'>
             <Thead>
                {table.getHeaderGroups().map(headerGroup => (
@@ -178,6 +184,29 @@ const PlantsTable: React.FC<Props> = ({ trueData }) => {
             </Tfoot>
          </Table>
       </TableContainer>
+      <Flex pt={8}>
+         <Box>
+            <ButtonGroup gap='2'>
+               <IconButton 
+                  onClick={() => table.previousPage()}
+                  disabled={!table.getCanPreviousPage()}
+                  aria-label='Search database' 
+                  icon={<ArrowLeftIcon />} 
+               />
+               <IconButton 
+                  onClick={() => table.nextPage()}
+                  disabled={!table.getCanNextPage()}
+                  aria-label='Search database' 
+                  icon={<ArrowRightIcon />} 
+               />
+            </ButtonGroup>
+         </Box>
+         <Divider borderBottom={0}/>
+         <Box minW='100px' as={Text}>
+            Pagina {table.getState().pagination.pageIndex + 1} di {table.getPageCount()}
+         </Box>
+      </Flex>
+   </>
    )
 }
 

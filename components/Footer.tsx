@@ -37,10 +37,9 @@ const Footer: React.FC = () => {
                </Stack>
 
                <Stack align={'flex-start'}>
-                  <ListHeader>Affiliati</ListHeader>
-                  <Link href={'#'}>Link 1</Link>
-                  <Link href={'#'}>Link 2</Link>
-                  <Link href={'#'}>Link 3</Link>
+                  <ListHeader>Risorse</ListHeader>
+                  <Link href={'https://vercel.com'}>Vercel</Link>
+                  <Link href={'https://www.vecteezy.com'}>Vecteezy</Link>
                </Stack>
 
                <Stack align={'flex-start'}>

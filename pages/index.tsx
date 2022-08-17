@@ -13,6 +13,9 @@ import websiteConfig from '../lib/config/website'
 // import function for call plants data
 import { getSortedPlantsData } from '../lib/model/plants'
 
+import ChakraImage from '../lib/helper/chakraImage'
+import landscape from '../public/landscape.png'
+
 // @ getStaticProps call
 export const getStaticProps: GetStaticProps = async () => {
   const data = getSortedPlantsData();
@@ -46,6 +49,22 @@ const Home: NextPage<Props> = ( {plants} ) => {
         description={websiteConfig.meta.subTitle}
         ogImage={websiteConfig.meta.ogImage}
       />
+
+      <Container 
+        maxW='container.xl'
+        centerContent
+        pt={14}
+      >
+        <ChakraImage
+          alt="Anzasca"
+          src={landscape}
+          width={600}
+          height={230}
+          quality={100}
+          placeholder="blur"
+        />
+      </Container>
+      
       <Hero 
         headline={websiteConfig.meta.title} 
         subHeadline={websiteConfig.meta.subTitle} 

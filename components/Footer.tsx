@@ -40,6 +40,7 @@ const Footer: React.FC = () => {
                   <ListHeader>Risorse</ListHeader>
                   <Link href={'https://vercel.com'}>Vercel</Link>
                   <Link href={'https://www.vecteezy.com'}>Vecteezy</Link>
+                  <Link href={'https://github.com/pankaspe'}>Github</Link>
                </Stack>
 
                <Stack align={'flex-start'}>
@@ -47,7 +48,6 @@ const Footer: React.FC = () => {
                   <Link href={'https://it.reactjs.org'}>React</Link>
                   <Link href={'https://chakra-ui.com'}>Chakra UI</Link>
                   <Link href={'https://www.typescriptlang.org'}>Typescript</Link>
-                  <Link href={'https://github.com/pankaspe'}>Github</Link>
                </Stack>
 
             </SimpleGrid>

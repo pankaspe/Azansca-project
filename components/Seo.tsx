@@ -29,9 +29,9 @@ const Seo: React.FC<Seo> = ({ title, description, ogImage }) => {
         <meta 
           property="og:title" 
           content={path === "/" ? title : `${websiteConfig.meta.title}  - ${title}`}
-          key="title"
+          key="fb title"
         />
-        <meta property="og:url" content={path} />
+        <meta property="og:url" content={websiteConfig.meta.url + path} />
         <meta property="og:description" content={description} key="desc" />
         <meta property="og:image" content={websiteConfig.meta.url + ogImage} />
         <meta property="og:image:alt" content={description}></meta>
@@ -41,12 +41,12 @@ const Seo: React.FC<Seo> = ({ title, description, ogImage }) => {
         <meta 
           name="twitter:title" 
           content={path === "/" ? title : `${websiteConfig.meta.title}  - ${title}`}
-          key="title"
+          key="tw title"
         />
-        <meta name="twitter:url" content={path} />
+        <meta name="twitter:url" content={websiteConfig.meta.url + path} />
         <meta name="twitter:description" content={description} key="desc" />
-        <meta name="twitter:image" content={websiteConfig.meta.url + ogImage} />
-        <meta name="twitter:image:alt" content={description}></meta>
+        <meta name="twitter:image" content={websiteConfig.meta.url + ogImage} key="tw image" />
+        <meta name="twitter:image:alt" content={description} />
       </Head>
     </>
   )

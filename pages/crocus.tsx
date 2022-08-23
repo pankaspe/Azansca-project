@@ -95,8 +95,8 @@ const Crocus: NextPage = () => {
                </Text>
                <Text mt={2}>
                   Per preparare lo Zafferano in stimmi, scaldare dell&apos;acqua senza raggiungere il bollore, versarla in un vasetto o bicchiere e immergere al suo interno gli stimmi (circa 7 pezzi per persona). 
-                  Il nostro consiglio è di lasciarlo a bagno maria per circa un&apos;ora, passata la quale l&apos;acqua avr&rsquo; preso un colorito giallo intenso tendente all'arancione, pronta per essere utilizzata nella pietanza prima di essere servita! 
-                  Se ne sconsiglia la cottura per evitare di disperdere le proprietà della spezia.
+                  Il nostro consiglio è di lasciarlo a bagno maria per circa un&apos;ora, passata la quale l&apos;acqua avr&rsquo; preso un colorito giallo intenso tendente all&apos;arancione, pronta per essere utilizzata nella pietanza prima di essere servita! 
+                  Se ne sconsiglia la cottura per evitare di disperdere le propriet&rsquo; della spezia.
                </Text>
                <Alert status='info' mt={6} mb={{ base: 4, md: 0}}>
                   <AlertIcon />

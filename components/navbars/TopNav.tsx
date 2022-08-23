@@ -199,6 +199,10 @@ const NAV_ITEMS: Array<NavItem> = [
     href: '/',
   },
   {
+    label: 'Zafferano',
+    href: '/crocus'
+  },
+  {
     label: 'Faq',
     href: '/faq',
   },

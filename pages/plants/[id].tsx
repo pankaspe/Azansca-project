@@ -1,5 +1,5 @@
 import type { GetStaticProps, GetStaticPaths, NextPage } from 'next'
-import { Container, Text, Box } from '@chakra-ui/react'
+import { Container, Box } from '@chakra-ui/react'
 
 /* import custom components */
 import MainLayout from "../../components/layouts/MainLayout"
@@ -35,7 +35,7 @@ const Plant: NextPage<Props> = ({ plantData }) => {
       <Container maxW='container.xl'>
         <Box style={{ position: 'relative', height: '400px' }}>
           <ChakraImage
-            alt="Mountains"
+            alt={plantData.title}
             src={plantData.hero}
             layout="fill"
             objectFit="cover"
@@ -44,7 +44,7 @@ const Plant: NextPage<Props> = ({ plantData }) => {
             blurDataURL={plantData.hero}
           />
         </Box>
-        <Text dangerouslySetInnerHTML={{ __html: plantData.contentHtml }} />
+        <div dangerouslySetInnerHTML={{ __html: plantData.contentHtml }} />
       </Container>
     </MainLayout>
    )

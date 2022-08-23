@@ -70,7 +70,7 @@ const Crocus: NextPage = () => {
                <Alert status='info' mt={6}>
                   <AlertIcon />
                   <AlertDescription fontSize='sm' letterSpacing='wide'>
-                     <strong>Il report di analisi qualitativa prodotto dall'associazione Val.Te.Mo:</strong>
+                     <strong>Il report di analisi qualitativa prodotto dall&apos;associazione Val.Te.Mo:</strong>
                      prima qualità Aroma: A 330nm; Potere amaricante: A 257nm; Colorante: A 440nm;
                   </AlertDescription>
                </Alert>
@@ -94,8 +94,8 @@ const Crocus: NextPage = () => {
                   Preparazione e utilizzo
                </Text>
                <Text mt={2}>
-                  Per preparare lo Zafferano in stimmi, scaldare dell'acqua senza raggiungere il bollore, versarla in un vasetto o bicchiere e immergere al suo interno gli stimmi (circa 7 pezzi per persona). 
-                  Il nostro consiglio è di lasciarlo a bagno maria per circa un'ora, passata la quale l'acqua avrà preso un colorito giallo intenso tendente all'arancione, pronta per essere utilizzata nella pietanza prima di essere servita! 
+                  Per preparare lo Zafferano in stimmi, scaldare dell&apos;acqua senza raggiungere il bollore, versarla in un vasetto o bicchiere e immergere al suo interno gli stimmi (circa 7 pezzi per persona). 
+                  Il nostro consiglio è di lasciarlo a bagno maria per circa un&apos;ora, passata la quale l&apos;acqua avr&rsquo; preso un colorito giallo intenso tendente all'arancione, pronta per essere utilizzata nella pietanza prima di essere servita! 
                   Se ne sconsiglia la cottura per evitare di disperdere le proprietà della spezia.
                </Text>
                <Alert status='info' mt={6} mb={{ base: 4, md: 0}}>

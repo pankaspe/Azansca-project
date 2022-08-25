@@ -203,6 +203,10 @@ const NAV_ITEMS: Array<NavItem> = [
     href: '/crocus'
   },
   {
+    label: 'Poi',
+    href: '/poi'
+  },
+  {
     label: 'Faq',
     href: '/faq',
   },

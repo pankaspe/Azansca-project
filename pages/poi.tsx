@@ -35,6 +35,7 @@ interface Props {
      desc: string,
      url: string,
      hero: string,
+     season: string,
      type: string,
      tags: string[],
   }[],
@@ -141,9 +142,17 @@ const Poi: NextPage<Props> = ({ poi }) => {
                 as="p"
                 mt={4}
                 fontSize="lg"
-                color="gray"
+                color="gray.500"
               >
                 <ChevronRightIcon /> Categoria: {poi.type}
+              </Text>
+              <Text
+                as="p"
+                mt={4}
+                fontSize="lg"
+                color="gray.600"
+              >
+                <ChevronRightIcon /> Stagione: {poi.season}
               </Text>
               <Button as={Link} href={poi.url} mt={14} colorScheme='orange' variant='outline'>
                 mostra dettagli

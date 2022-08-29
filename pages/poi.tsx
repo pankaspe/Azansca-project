@@ -74,7 +74,9 @@ const Poi: NextPage<Props> = ({ poi }) => {
 
       {/* start main page content */}
       <Container maxW='container.xl'>
+        
         {poi.map((poi) => (
+
           <Box
             key={poi.title}
             display="flex"
@@ -87,6 +89,8 @@ const Poi: NextPage<Props> = ({ poi }) => {
               marginRight="3"
               position="relative"
               alignItems="center">
+              
+              {/* box image */}
               <Box
                 width={{ base: '100%', sm: '85%' }}
                 zIndex="2"
@@ -103,6 +107,7 @@ const Poi: NextPage<Props> = ({ poi }) => {
                   />
               </Box>
 
+              {/* box background effect pattern */}
               <Box zIndex="1" width="100%" position="absolute" height="100%">
                 <Box
                   bgGradient={'radial(yellow.600 1px, transparent 1px)'}
@@ -113,6 +118,8 @@ const Poi: NextPage<Props> = ({ poi }) => {
               </Box>
 
             </Box>
+
+            {/* box meta */}
             <Box
               display="flex"
               flex="1"
@@ -142,8 +149,10 @@ const Poi: NextPage<Props> = ({ poi }) => {
                 mostra dettagli
               </Button>
             </Box>
+
           </Box>
         ))}
+
       </Container>
     </MainLayout>
   )

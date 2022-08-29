@@ -22,7 +22,15 @@ const dataPoi = [
       type: "Escursione",
       url: "https://it.wikiloc.com/percorsi-escursionismo/pizzo-castello-93757688",
       tags: ["Cimamulera", "E", "8,46km", "1.600m"]
-   }
+   },
+   {
+      title: "Monte Moro - Antrona Schieranco",
+      desc: "Traversata piuttosto lunga che parte da Staffa e finisce ad Antrona Schieranco, passando per il bivacco Antigine.",
+      hero: "/content/tracks/hero_moro-schieranco.jpg",
+      type: "Escursione",
+      url: "https://it.wikiloc.com/percorsi-escursionismo/monte-moro-bivacco-antigine-antrona-schieranco-93692677",
+      tags: ["Macugnaga", "EEA", "27,17km", "3.107m"]
+   },
 ]
 
 export default dataPoi

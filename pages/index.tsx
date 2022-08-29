@@ -1,4 +1,5 @@
 import type { NextPage, GetStaticProps } from 'next'
+import NextLink from "next/link"
 import { Container } from '@chakra-ui/react'
 
 /* import custom components */

@@ -1,8 +1,14 @@
 import type { NextPage } from 'next'
-import Image from 'next/image'
+import {
+  Container,
+  Alert,
+  AlertIcon,
+  AlertTitle,
+  AlertDescription,
+} from '@chakra-ui/react';
 import MainLayout from "../components/layouts/MainLayout";
 import Seo from "../components/Seo";
-import Hero from '../components/Hero'
+import Hero from '../components/Hero';
 
 import websiteConfig from '../lib/config/website'
 
@@ -18,6 +24,13 @@ const Faq: NextPage = () => {
          headline="F.A.Q." 
          subHeadline="frequently asked question" 
       />
+      <Container maxW='container.xl'>
+        <Alert status='warning' variant='subtle'>
+          <AlertIcon />
+          <AlertTitle>Ci spiace!</AlertTitle>
+          <AlertDescription>Ma questa pagina è in fase di costruzione</AlertDescription>
+        </Alert>
+      </Container>
     </MainLayout>
   )
 }

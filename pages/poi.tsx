@@ -3,6 +3,7 @@ import MainLayout from "../components/layouts/MainLayout";
 import Seo from "../components/Seo";
 import Hero from '../components/Hero';
 import dataPoi from "../content/poi/dataPoi"
+
 import {
   Box,
   Heading,
@@ -14,6 +15,7 @@ import {
   Button,
   Link,
 } from '@chakra-ui/react';
+import { ChevronRightIcon } from '@chakra-ui/icons';
 
 import websiteConfig from '../lib/config/website';
 import ChakraImage from '../lib/helper/chakraImage';
@@ -76,7 +78,7 @@ const Poi: NextPage<Props> = ({ poi }) => {
           <Box
             key={poi.title}
             display="flex"
-            mb={8}
+            mb={14}
             flexDirection={{ base: 'column', md: 'row' }}
             justifyContent="space-between">
             <Box
@@ -93,7 +95,7 @@ const Poi: NextPage<Props> = ({ poi }) => {
                   <ChakraImage
                     alt="Anzasca"
                     src={poi.hero}
-                    width={640}
+                    width={700}
                     height={300}
                     quality={100}
                     placeholder="blur"
@@ -117,10 +119,10 @@ const Poi: NextPage<Props> = ({ poi }) => {
               flexDirection="column"
               justifyContent="center"
               marginTop={{ base: '3', sm: '0' }}>
-              <BlogTags tags={poi.tags} />
-              <Heading marginTop="1">
+              <Heading pb={4} as='h1' size='lg'>
                   {poi.title}
               </Heading>
+              <BlogTags tags={poi.tags} />
               <Text
                 as="p"
                 mt={8}
@@ -134,9 +136,9 @@ const Poi: NextPage<Props> = ({ poi }) => {
                 fontSize="lg"
                 color="gray"
               >
-                Categoria: {poi.type}
+                <ChevronRightIcon /> Categoria: {poi.type}
               </Text>
-              <Button as={Link} href={poi.url} target="_blank" mt={14} colorScheme='orange' variant='outline'>
+              <Button as={Link} href={poi.url} mt={14} colorScheme='orange' variant='outline'>
                 mostra dettagli
               </Button>
             </Box>

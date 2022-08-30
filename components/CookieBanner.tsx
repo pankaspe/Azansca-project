@@ -35,7 +35,7 @@ const CookieBanner: React.FC = () => {
       declineButtonText	= "Rifiuta i cookies"
       buttonText = "Ok, capito!"
    >
-      Questo sito utilizza i cookie per rendere l'esperienza di navigazione più accessibile.
+      Questo sito utilizza i cookie per rendere l&apos;esperienza di navigazione accessibile.
    </CookieConsent>
    )
 }

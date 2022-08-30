@@ -1,8 +1,10 @@
 import type { NextPage, GetStaticProps } from 'next';
+import { useState } from 'react';
+
 import MainLayout from "../components/layouts/MainLayout";
 import Seo from "../components/Seo";
 import Hero from '../components/Hero';
-import dataPoi from "../content/poi/dataPoi"
+import dataPoi from "../content/poi/dataPoi";
 
 import {
   Box,
@@ -31,13 +33,14 @@ export const getStaticProps: GetStaticProps = async () => {
 // @ set Props interface as plants object
 interface Props {
   poi: {
-     title: string,
-     desc: string,
-     url: string,
-     hero: string,
-     season: string,
-     type: string,
-     tags: string[],
+    id: string,
+    title: string,
+    desc: string,
+    url: string,
+    hero: string,
+    season: string,
+    type: string,
+    tags: string[],
   }[],
 }
 
@@ -61,6 +64,13 @@ const BlogTags: React.FC<IBlogTags> = (props) => {
 };
 
 const Poi: NextPage<Props> = ({ poi }) => {
+
+  const [ postNum, setPostNum] = useState(3);
+
+  function handleClick() {
+    setPostNum(prevPostNum => prevPostNum + 3)
+  }
+  
   return (
     <MainLayout>
       <Seo
@@ -76,10 +86,10 @@ const Poi: NextPage<Props> = ({ poi }) => {
       {/* start main page content */}
       <Container maxW='container.xl'>
         
-        {poi.map((poi) => (
+        {poi.slice(0, postNum).map((poi) => (
 
           <Box
-            key={poi.title}
+            key={poi.id}
             display="flex"
             mb={14}
             flexDirection={{ base: 'column', md: 'row' }}
@@ -161,6 +171,16 @@ const Poi: NextPage<Props> = ({ poi }) => {
 
           </Box>
         ))}
+
+        <Box 
+          pt={4}
+          display="flex"
+          flex="1"
+          flexDirection="column"
+          justifyContent="center"
+        >
+          <Button onClick={handleClick}>mostra piu risultati</Button>
+        </Box>
 
       </Container>
     </MainLayout>

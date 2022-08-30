@@ -172,6 +172,7 @@ const Poi: NextPage<Props> = ({ poi }) => {
           </Box>
         ))}
 
+        {/* load more button */}
         <Box 
           pt={4}
           display="flex"
@@ -179,7 +180,12 @@ const Poi: NextPage<Props> = ({ poi }) => {
           flexDirection="column"
           justifyContent="center"
         >
-          <Button onClick={handleClick}>mostra piu risultati</Button>
+          {
+            postNum === poi.length 
+            ? null
+            : <Button onClick={handleClick}>mostra piu risultati</Button>
+          }
+          
         </Box>
 
       </Container>

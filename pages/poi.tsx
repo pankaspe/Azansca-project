@@ -1,11 +1,6 @@
 import type { NextPage, GetStaticProps } from 'next';
 import { useState } from 'react';
 
-import MainLayout from "../components/layouts/MainLayout";
-import Seo from "../components/Seo";
-import Hero from '../components/Hero';
-import dataPoi from "../content/poi/dataPoi";
-
 import {
   Box,
   Heading,
@@ -19,9 +14,14 @@ import {
 } from '@chakra-ui/react';
 import { ChevronRightIcon } from '@chakra-ui/icons';
 
+import MainLayout from "../components/layouts/MainLayout";
+import Seo from "../components/Seo";
+import Hero from '../components/Hero';
+import dataPoi from "../content/poi/dataPoi";
 import websiteConfig from '../lib/config/website';
 import ChakraImage from '../lib/helper/chakraImage';
 
+// @ getStaticProps call
 export const getStaticProps: GetStaticProps = async () => {
   return {
     props: {
@@ -29,6 +29,27 @@ export const getStaticProps: GetStaticProps = async () => {
     },
   };
 }
+
+// @ set IPoiTags interface
+interface IPoiTags {
+  tags: Array<string>;
+  marginTop?: SpaceProps['marginTop'];
+}
+
+// @ PoiTags component
+const PoiTags: React.FC<IPoiTags> = (props) => {
+  return (
+    <HStack spacing={2} marginTop={props.marginTop}>
+      {props.tags.map((tag) => {
+        return (
+          <Tag size={'md'} variant="solid" colorScheme="green" key={tag}>
+            {tag}
+          </Tag>
+        );
+      })}
+    </HStack>
+  );
+};
 
 // @ set Props interface as plants object
 interface Props {
@@ -44,28 +65,10 @@ interface Props {
   }[],
 }
 
-interface IBlogTags {
-  tags: Array<string>;
-  marginTop?: SpaceProps['marginTop'];
-}
-
-const BlogTags: React.FC<IBlogTags> = (props) => {
-  return (
-    <HStack spacing={2} marginTop={props.marginTop}>
-      {props.tags.map((tag) => {
-        return (
-          <Tag size={'md'} variant="solid" colorScheme="green" key={tag}>
-            {tag}
-          </Tag>
-        );
-      })}
-    </HStack>
-  );
-};
-
+// @ main component react
 const Poi: NextPage<Props> = ({ poi }) => {
 
-  const [ postNum, setPostNum] = useState(3);
+  const [ postNum, setPostNum ] = useState(3);
 
   function handleClick() {
     setPostNum(prevPostNum => prevPostNum + 3)
@@ -140,7 +143,7 @@ const Poi: NextPage<Props> = ({ poi }) => {
               <Heading pb={4} as='h1' size='lg'>
                   {poi.title}
               </Heading>
-              <BlogTags tags={poi.tags} />
+              <PoiTags tags={poi.tags} />
               <Text
                 as="p"
                 mt={8}

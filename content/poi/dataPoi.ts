@@ -10,7 +10,7 @@ const dataPoi = [
    },
    {
       title: "Passo Mondelli - Passo del Monte Moro",
-      desc: "Traversata molto lunga che parte da Staffa e finisce a Mondelli, nel comune di Macugnaga. Fattibile anche in inverno con le pelli.",
+      desc: "Traversata lunga che parte da Staffa e finisce a Mondelli, nel comune di Macugnaga. Fattibile anche in inverno con le pelli.",
       hero: "/content/tracks/hero_staffa-mondelli.jpg",
       season: "tutto l'anno",
       type: "Escursione",
@@ -19,12 +19,21 @@ const dataPoi = [
    },
    {
       title: "Monte Moro - Antrona Schieranco",
-      desc: "Traversata piuttosto lunga che parte da Staffa e finisce ad Antrona Schieranco, passando per il bivacco Antigine.",
+      desc: "Traversata molto lunga con ampio dislivello che parte da Staffa e finisce ad Antrona Schieranco, passando per il bivacco Antigine.",
       hero: "/content/tracks/hero_moro-schieranco.jpg",
       season: "da giugno a settembre",
       type: "Escursione",
       url: "https://it.wikiloc.com/percorsi-escursionismo/monte-moro-bivacco-antigine-antrona-schieranco-93692677",
       tags: ["Macugnaga", "EEA", "27,17km", "3.107m"]
+   },
+   {
+      title: "Pizzo Nero",
+      desc: "Escursione con molto dislivello. Tratto che porta dal colletto del nero al Pizzo molto esposto e stretto.",
+      hero: "/content/tracks/hero_pizzo-nero.jpg",
+      season: "da giugno a ottobre",
+      type: "Escursione",
+      url: "https://it.wikiloc.com/percorsi-escursionismo/pizzo-nero-93693942",
+      tags: ["Macugnaga", "EEA", "14,49km", "2.748m"]
    },
    {
       title: "[AR] Faderhorn - Pizzo Croce",
